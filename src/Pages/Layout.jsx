@@ -1,4 +1,4 @@
-import { NavLink, Outlet b} from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
 
 const Layout =()=>{
    return(
@@ -13,6 +13,12 @@ const Layout =()=>{
           </li>
           <li>
           <NavLink to='/grossery'>Grossery page</NavLink>
+          </li>
+          <li>
+          <NavLink to='/colorPicker'>ColorPicker page</NavLink>
+          </li>
+          <li>
+          <NavLink to='/form'>Sign Up Form</NavLink>
           </li>
         </ul>
       </nav>
