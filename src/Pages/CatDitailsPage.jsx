@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, Outlet } from "react-router-dom"
 
 const CatDetailPage=()=>{
     const {catId} = useParams()
@@ -6,9 +6,10 @@ const CatDetailPage=()=>{
        <>
         <h1>Cat {catId}</h1>
         <ul>
-            <li><Linl to="description">Description</Linl></li>
-            <li><Linl to="breeeds_history">History</Linl></li>
+            <li><Link to="description">Description</Link></li>
+            <li><Link to="breeeds_history">History</Link></li>
         </ul>
+        <Outlet/>
        </>
     )
 }
