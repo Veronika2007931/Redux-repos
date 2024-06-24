@@ -1,11 +1,13 @@
 import {Routes, Route, NavLink} from "react-router-dom"
-import Layout from "Pages/Layout"
-import GreatsPage from "../Pages/GreatsPage"
-import CatsPage from "../Pages/CatsPage"
-import NotFound from "../Pages/NotFound"
-import CatDetailPage from "Pages/CatDitailsPage"
+import {lazy} from 'react'
 import ColorPickerPage from "Pages/ColourPickerPage"
 import FormPage from "Pages/FormPage"
+
+const GreatsPage = lazy(()=>import('./Pages/GreatsPage.jsx'))
+const CatsPage = lazy(()=>import('./Pages/CatsPage.jsx'))
+const NotFound = lazy(()=>import('./Pages/NotFoundPage.jsx'))
+const CatDetailPage = lazy(()=>import('./Pages/CatDetailPage'))
+const Layout = lazy(()=>import('./Pages/Layout'))
 
 export function App(){
   return (
