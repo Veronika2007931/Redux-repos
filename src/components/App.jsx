@@ -3,11 +3,11 @@ import {lazy} from 'react'
 import ColorPickerPage from "Pages/ColourPickerPage"
 import FormPage from "Pages/FormPage"
 
-const GreatsPage = lazy(()=>import('./Pages/GreatsPage.jsx'))
-const CatsPage = lazy(()=>import('./Pages/CatsPage.jsx'))
-const NotFound = lazy(()=>import('./Pages/NotFoundPage.jsx'))
-const CatDetailPage = lazy(()=>import('./Pages/CatDetailPage'))
-const Layout = lazy(()=>import('./Pages/Layout'))
+const GreatsPage = lazy(()=>import('../Pages/GreatsPage.jsx'))
+const CatsPage = lazy(()=>import('../Pages/CatsPage.jsx'))
+const NotFound = lazy(()=>import('../Pages/NotFound.jsx'))
+const CatDetailsPage = lazy(()=>import('../Pages/CatDitailsPage'))
+const Layout = lazy(()=>import('../Pages/Layout'))
 
 export function App(){
   return (
@@ -18,7 +18,7 @@ export function App(){
         <Route path="/" element={<Layout/>}>
         <Route index element={<GreatsPage/>}/>
         <Route path="cats" element={<CatsPage/>}/>
-        <Route path="cats/:catId" element={<CatDetailPage/>}>
+        <Route path="cats/:catId" element={<CatDetailsPage/>}>
            <Route path='discription' element={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quam laboriosam. Dicta debitis repellat quas inventore est, 
             cum delectus eligendi laborum laudantium 
             ea officiis ipsum non id impedit consequuntur praesentium!</p>} elment={<p>Опис котика</p>}/>
